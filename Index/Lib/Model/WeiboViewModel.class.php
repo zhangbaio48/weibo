@@ -33,7 +33,8 @@ Class WeiboViewModel extends ViewModel {
 		if ($result) {
 			foreach ($result as $k => $v) {
 				if ($v['isturn']) {
-					$result[$k]['isturn'] = $this->find($v['isturn']);
+					$tmp = $this->find($v['isturn']);
+					$result[$k]['isturn'] = $tmp ? $tmp : -1;
 				}
 			}
 		}

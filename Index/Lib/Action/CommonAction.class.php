@@ -97,6 +97,102 @@ Class CommonAction extends Action {
 	}
 
 	/**
+	 * 异步移除关注与粉丝
+	 */
+	Public function delFollow () {
+		if (!$this->isAjax()) {
+			halt('页面不存在');
+		}
+
+		$uid = $this->_post('uid', 'intval');
+		$type = $this->_post('type', 'intval');
+
+		$where = $type ? array('follow' => $uid, 'fans' => session('uid')) : array('fans' => $uid, 'follow' => session('uid'));
+
+		if (M('follow')->where($where)->delete()) {
+			$db = M('userinfo');
+
+			if ($type) {
+				$db->where(array('uid' => session('uid')))->setDec('follow');
+				$db->where(array('uid' => $uid))->setDec('fans');
+			} else {
+				$db->where(array('uid' => session('uid')))->setDec('fans');
+				$db->where(array('uid' => $uid))->setDec('follow');
+			}
+
+			echo 1;
+		} else {
+			echo 0;
+		}
+	}
+
+	/**
+	 * 异步修改模版风格
+	 */
+	Public function editStyle () {
+		if (!$this->isAjax()) {
+			halt('页面不存在');
+		}
+
+		$style = $this->_post('style');
+		$where = array('uid' => session('uid'));
+
+		if (M('userinfo')->where($where)->save(array('style' => $style))) {
+			echo 1;
+		} else {
+			echo 0;
+		}
+	}
+
+	/**
+	 * 异步轮询推送消息
+	 */
+	Public function getMsg () {
+		if (!$this->isAjax()) {
+			halt('页面不存在');
+		}
+		
+		$uid = session('uid');
+		$msg = S('usermsg' . $uid);
+
+		if ($msg) {
+			if ($msg['comment']['status']) {
+				$msg['comment']['status'] = 0;
+				S('usermsg' . $uid, $msg, 0);
+				echo json_encode(array(
+					'status' => 1,
+					'total' => $msg['comment']['total'],
+					'type' => 1
+					));
+				exit();
+			}
+
+			if ($msg['letter']['status']) {
+				$msg['letter']['status'] = 0;
+				S('usermsg' . $uid, $msg, 0);
+				echo json_encode(array(
+					'status' => 1,
+					'total' => $msg['letter']['total'],
+					'type' => 2
+					));
+				exit();
+			}
+
+			if ($msg['atme']['status']) {
+				$msg['atme']['status'] = 0;
+				S('usermsg' . $uid, $msg, 0);
+				echo json_encode(array(
+					'status' => 1,
+					'total' => $msg['atme']['total'],
+					'type' => 3
+					));
+				exit();
+			}
+		}
+		echo json_encode(array('status' => 0));
+	}
+
+	/**
 	 * 图片上传处理
 	 * @param  [String] $path   [保存文件夹名称]
 	 * @param  [String] $width  [缩略图宽度多个用，号分隔]

@@ -1,4 +1,5 @@
 $(function () {
+
 	$('.c-reply').toggle (function () {
 		var name = $(this).parents('dl').find('dd a').html();
 		var str = '回复@' + name.replace(/：$/, ' ') + '：';
@@ -6,6 +7,47 @@ $(function () {
 	}, function () {
 		$(this).parent().next().hide();
 	});
+
+	//回复按钮
+	$('.comment_btn').click(function () {
+		var data = {
+			wid : $(this).attr('wid'),
+			content : $(this).parents('ul').prev().val()
+		};
+		var obj = $(this).parents('.comment_list');
+
+		$.post(replyUrl, data, function (data) {
+			if (data) {
+				alert('评论已回复');
+				obj.hide();
+			} else {
+				alert('回复失败请重试...');
+			}
+		}, 'json');
+	});
+
+	//删除评论
+	$('.del-comment').click(function () {
+		var data = {
+			cid : $(this).attr('cid'),
+			wid : $(this).attr('wid')
+		};
+		var isDel = confirm('确定删除该评论？');
+		var obj = $(this).parents('dl');
+
+		if (isDel) {
+			$.post(delComment, data, function (data) {
+				if (data) {
+					obj.slideUp('slow', function () {
+						obj.remove();
+					});
+				} else {
+					alert('删除失败请重试...');
+				}
+			}, 'json');
+		}
+	});
+
 
 	/**
      * 表情处理

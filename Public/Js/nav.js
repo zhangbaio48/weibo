@@ -202,17 +202,104 @@ $(function () {
    		$('#follow-bg').remove();
    });
 
+   //移除关注与粉丝
+   $('.del-follow').click(function () {
+   		var data = {
+   			uid : $(this).attr('uid'),
+   			type : $(this).attr('type')
+   		};
+   		var isDel = confirm('确认移除?');
+   		var obj = $(this).parents('li');
+
+   		if (isDel) {
+   			$.post(delFollow, data, function (data) {
+   				if (data) {
+   					obj.slideUp('slow', function () {
+   						obj.remove();
+   					})
+   				} else {
+   					alert('移除失败请重试...');
+   				}
+   			}, 'json');
+   		}
+   });
+
+   //搜索切换
+   $('.sech-type').click(function () {
+   		$('.cur').removeClass('cur');
+   		$(this).addClass('cur');
+   		$('form[name=search]').attr('action', $(this).attr('url'));
+   });
+
+   	/**
+	 * 自定义模版框
+	 */
+	 $('.set_model').click(function () {
+	 	//点击转发创建透明背景层
+	 	createBg('opacity_bg');
+	 	//定位模版选择框居中
+	 	var modelLeft = ($(window).width() - $('#model').width()) / 2;
+	 	var modelTop = $(document).scrollTop() + ($(window).height() - $('#model').height()) / 2;
+	 	$('#model').css({
+	 		'left' : modelLeft,
+	 		'top' : modelTop
+	 	}).fadeIn();
+	 	return false;
+	 });
+	 //点击消取时
+	 $('.model_cancel').click(function () {
+		$('#model').hide();
+		$('#opacity_bg').remove();
+	 });
+	 drag($('#model'), $('.model_text'));  //拖拽模版框
+
+	 //选中模版风格
+	 $('#model ul li').click(function () {
+	 	$(this).addClass('theme-cur').siblings().removeClass('theme-cur');
+	 });
+
+	 //保存模版风格
+	 $('#model .model_save').click(function () {
+	 	var theme = $('.theme-cur').attr('theme');
+
+	 	if (!theme) {
+	 		alert('请选择一套模版风格');
+	 	} else {
+	 		$.post(editStyle, {style : theme}, function (data) {
+	 			if (data) {
+	 				window.location.reload();
+	 			} else {
+	 				alert('修改失败请重试...');
+	 			}
+	 		}, 'json');
+	 	}
+	 })
 
 	//消息推送回调函数
-   /* news({
-		"total" : 2,
-		"type" : 1
-	});*/
+	get_msg(getMsgUrl);
+ 
 	
 });
 
 
 /********************效果函数********************/
+
+/**
+ * 异步轮询函数
+ */
+function get_msg (url) {
+	$.getJSON(url, function (data) {
+		if (data.status) {
+		   news({
+				"total" : data.total,
+				"type" : data.type
+			});
+		}
+		setTimeout(function () {
+			get_msg(url);
+		}, 5000);
+	});
+}
 
 /**
  * 推送的新消息

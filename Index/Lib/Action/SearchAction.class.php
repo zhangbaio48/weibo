@@ -41,6 +41,34 @@ Class SearchAction extends CommonAction {
 	}
 
 	/**
+	 * 搜索微博
+	 */
+	Public function sechWeibo () {
+		$keyword = $this->_getKeyword();
+		
+		if ($keyword) {
+			//检索含有关键字的微博
+			$where = array('content' => array('LIKE', '%' . $keyword . '%'));
+
+			$db = D('WeiboView');
+
+			//导入分页类
+			import('ORG.Util.Page');
+			$count = M('weibo')->where($where)->count('id');
+			$page = new Page($count, 20);
+			$limit = $page->firstRow . ',' . $page->listRows;
+			$weibo = $db->getAll($where, $limit);
+
+			$this->weibo = $weibo ? $weibo : false;
+			//页码
+			$this->page = $page->show();
+		}
+
+		$this->keyword = $keyword;
+		$this->display();
+	}
+
+	/**
 	 * 返回搜索关键字
 	 */
 	Private function _getKeyword () {

@@ -55,6 +55,9 @@ Class LoginAction extends Action {
 	 * 注册页面
 	 */
 	Public function register () {
+		if (!C('REGIS_ON')) {
+			$this->error('网站暂停注册', U('index'));
+		}
 		$this->display();
 	}
 

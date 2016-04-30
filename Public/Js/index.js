@@ -108,31 +108,6 @@ $(function () {
 		$(this).parents('.turn_img_tool').hide().prev().show();
 	});
 
-
-
-	/**
-	 * 自定义模版框
-	 */
-	 $('#set_model').click(function () {
-	 	//点击转发创建透明背景层
-	 	createBg('opacity_bg');
-	 	//定位模版选择框居中
-	 	var modelLeft = ($(window).width() - $('#model').width()) / 2;
-	 	var modelTop = $(document).scrollTop() + ($(window).height() - $('#model').height()) / 2;
-	 	$('#model').css({
-	 		'left' : modelLeft,
-	 		'top' : modelTop
-	 	}).fadeIn();
-	 	return false;
-	 });
-	 //点击消取时
-	 $('.model_cancel').click(function () {
-		$('#model').hide();
-		$('#opacity_bg').remove();
-	 });
-	 drag($('#model'), $('.model_text'));  //拖拽模版框
-
-
 	/**
 	 * 转发框处理
 	 */
@@ -189,6 +164,36 @@ $(function () {
 	 });
 	drag($('#turn'), $('.turn_text'));  //拖拽转发框
 
+
+	/**
+	 * 收藏微博
+	 */
+	$('.keep').click(function () {
+		var wid = $(this).attr('wid');
+		var keepUp = $(this).next();
+		var msg = '';
+
+		$.post(keepUrl, {wid : wid}, function (data) {
+			if (data == 1) {
+				msg = '收藏成功';
+			}
+
+			if (data == -1) {
+				msg = '已收藏';
+			}
+
+			if (data == 0) {
+				msg = '收藏失败';
+			}
+
+			keepUp.html(msg).fadeIn();
+			setTimeout(function () {
+				keepUp.fadeOut();
+			}, 3000);
+
+		}, 'json');
+		
+	});
 
 
 	/**
@@ -306,6 +311,32 @@ $(function () {
 				commentList.show().find('textarea').val('').focus();
 			}
 		});
+	});
+
+	/**
+	 * 删除微博
+	 */
+	$('.weibo').hover(function () {
+		$(this).find('.del-li').show();
+	}, function () {
+		$(this).find('.del-li').hide();
+	});
+	$('.del-weibo').click(function () {
+		var wid = $(this).attr('wid');
+		var isDel = confirm('确认要删除该微博？');
+		var obj = $(this).parents('.weibo');
+
+		if (isDel) {
+			$.post(delWeibo, {wid : wid}, function (data) {
+				if (data) {
+					obj.slideUp('slow', function () {
+						obj.remove();
+					});
+				} else {
+					alert('删除失败请重试...');
+				}
+			}, 'json');
+		}
 	});
 
 
