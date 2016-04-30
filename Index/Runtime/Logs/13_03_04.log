@@ -1,0 +1,137 @@
+[ 2013-03-04T11:57:38+08:00 ] /weibo/index.php/Login | ERR: (ThinkException) 模板不存在[./Index/Tpl/default/Login/index.html]
+[ 2013-03-04T11:57:52+08:00 ] /weibo/index.php/Login/register | ERR: (ThinkException) 模板不存在[./Index/Tpl/default/Login/register.html]
+[ 2013-03-04T11:59:52+08:00 ] /weibo/index.php/Login/register | ERR: (ThinkException) 模板不存在[./Index/Tpl/default/Login/register.html]
+[ 2013-03-04T11:59:54+08:00 ] /weibo/index.php/Login/register | ERR: (ThinkException) 模板不存在[./Index/Tpl/default/Login/register.html]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ route_check ] --START--
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Run CheckRoute Behavior [ RunTime:0.000389s ]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ route_check ] --END-- [ RunTime:0.000450s ]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ app_begin ] --START--
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000228s ]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000261s ]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_template ] --START--
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Run LocationTemplate Behavior [ RunTime:0.000160s ]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_template ] --END-- [ RunTime:0.000195s ]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_parse ] --START--
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Run ParseTemplate Behavior [ RunTime:0.005189s ]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_parse ] --END-- [ RunTime:0.005271s ]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_filter ] --START--
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Run ContentReplace Behavior [ RunTime:0.000369s ]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Run TokenBuild Behavior [ RunTime:0.000377s ]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000127s ]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Run ShowRuntime Behavior [ RunTime:0.000246s ]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_filter ] --END-- [ RunTime:0.001246s ]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_end ] --START--
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Run ShowPageTrace Behavior [ RunTime:0.000253s ]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_end ] --END-- [ RunTime:0.000287s ]
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/Images/bottom_logo.gif | ERR: (ThinkException) 非法操作Images
+[ 2013-03-04T12:00:23+08:00 ] /weibo/index.php/Login/Css/regis.css | ERR: (ThinkException) 非法操作Css
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ route_check ] --START--
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Run CheckRoute Behavior [ RunTime:0.000466s ]
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ route_check ] --END-- [ RunTime:0.000586s ]
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ app_begin ] --START--
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000269s ]
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000303s ]
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_template ] --START--
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Run LocationTemplate Behavior [ RunTime:0.000159s ]
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_template ] --END-- [ RunTime:0.000195s ]
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_parse ] --START--
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Run ParseTemplate Behavior [ RunTime:0.004131s ]
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_parse ] --END-- [ RunTime:0.004178s ]
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_filter ] --START--
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Run ContentReplace Behavior [ RunTime:0.000171s ]
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Run TokenBuild Behavior [ RunTime:0.000219s ]
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000127s ]
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Run ShowRuntime Behavior [ RunTime:0.000354s ]
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_filter ] --END-- [ RunTime:0.000996s ]
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_end ] --START--
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Run ShowPageTrace Behavior [ RunTime:0.000387s ]
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_end ] --END-- [ RunTime:0.000446s ]
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/Css/regis.css | ERR: (ThinkException) 非法操作Css
+[ 2013-03-04T12:01:18+08:00 ] /weibo/index.php/Login/Images/bottom_logo.gif | ERR: (ThinkException) 非法操作Images
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ route_check ] --START--
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Run CheckRoute Behavior [ RunTime:0.000383s ]
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ route_check ] --END-- [ RunTime:0.000431s ]
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ app_begin ] --START--
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000234s ]
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000268s ]
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_template ] --START--
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Run LocationTemplate Behavior [ RunTime:0.000141s ]
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_template ] --END-- [ RunTime:0.000176s ]
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_parse ] --START--
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Run ParseTemplate Behavior [ RunTime:0.004402s ]
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_parse ] --END-- [ RunTime:0.004456s ]
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_filter ] --START--
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Run ContentReplace Behavior [ RunTime:0.000210s ]
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Run TokenBuild Behavior [ RunTime:0.000252s ]
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000117s ]
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Run ShowRuntime Behavior [ RunTime:0.000243s ]
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_filter ] --END-- [ RunTime:0.000922s ]
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_end ] --START--
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Run ShowPageTrace Behavior [ RunTime:0.000247s ]
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_end ] --END-- [ RunTime:0.000280s ]
+[ 2013-03-04T12:01:22+08:00 ] /weibo/index.php/Login/Css/login.css | ERR: (ThinkException) 非法操作Css
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ route_check ] --START--
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Run CheckRoute Behavior [ RunTime:0.000375s ]
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ route_check ] --END-- [ RunTime:0.000425s ]
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ app_begin ] --START--
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000234s ]
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000267s ]
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_template ] --START--
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Run LocationTemplate Behavior [ RunTime:0.000142s ]
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_template ] --END-- [ RunTime:0.000178s ]
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_parse ] --START--
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Run ParseTemplate Behavior [ RunTime:0.004580s ]
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_parse ] --END-- [ RunTime:0.004635s ]
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_filter ] --START--
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Run ContentReplace Behavior [ RunTime:0.000207s ]
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Run TokenBuild Behavior [ RunTime:0.000213s ]
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000098s ]
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Run ShowRuntime Behavior [ RunTime:0.000228s ]
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_filter ] --END-- [ RunTime:0.000873s ]
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_end ] --START--
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Run ShowPageTrace Behavior [ RunTime:0.000229s ]
+[ 2013-03-04T12:03:39+08:00 ] /weibo/index.php/Login/index | INFO: Tag[ view_end ] --END-- [ RunTime:0.000262s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ route_check ] --START--
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Run CheckRoute Behavior [ RunTime:0.000553s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ route_check ] --END-- [ RunTime:0.000631s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ app_begin ] --START--
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000255s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000292s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_template ] --START--
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Run LocationTemplate Behavior [ RunTime:0.000162s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_template ] --END-- [ RunTime:0.000201s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_parse ] --START--
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Run ParseTemplate Behavior [ RunTime:0.004532s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_parse ] --END-- [ RunTime:0.004603s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_filter ] --START--
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Run ContentReplace Behavior [ RunTime:0.000267s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Run TokenBuild Behavior [ RunTime:0.000307s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000178s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Run ShowRuntime Behavior [ RunTime:0.000285s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_filter ] --END-- [ RunTime:0.001180s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_end ] --START--
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Run ShowPageTrace Behavior [ RunTime:0.000224s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_end ] --END-- [ RunTime:0.000258s ]
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/Css/regis.css | ERR: (ThinkException) 非法操作Css
+[ 2013-03-04T12:04:15+08:00 ] /weibo/index.php/Login/Images/bottom_logo.gif | ERR: (ThinkException) 非法操作Images
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ route_check ] --START--
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Run CheckRoute Behavior [ RunTime:0.000535s ]
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ route_check ] --END-- [ RunTime:0.000589s ]
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ app_begin ] --START--
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000278s ]
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000327s ]
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_template ] --START--
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Run LocationTemplate Behavior [ RunTime:0.000161s ]
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_template ] --END-- [ RunTime:0.000202s ]
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_parse ] --START--
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Run ParseTemplate Behavior [ RunTime:0.003505s ]
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_parse ] --END-- [ RunTime:0.003544s ]
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_filter ] --START--
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Run ContentReplace Behavior [ RunTime:0.000169s ]
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Run TokenBuild Behavior [ RunTime:0.000190s ]
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000096s ]
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Run ShowRuntime Behavior [ RunTime:0.000221s ]
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_filter ] --END-- [ RunTime:0.000764s ]
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_end ] --START--
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Run ShowPageTrace Behavior [ RunTime:0.000224s ]
+[ 2013-03-04T12:04:39+08:00 ] /weibo/index.php/Login/register | INFO: Tag[ view_end ] --END-- [ RunTime:0.000254s ]
